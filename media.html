@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Media — EcoTrack</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
+<body>
+<header class="topbar"><a class="brand" href="index.html">ECOTRACK</a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="article.html">Article</a><a href="media.html">Media</a><a href="dashboard.html">Dashboard</a></nav><div class="top-actions"><button class="icon-btn" id="themeToggle">☾</button></div></header>
+<main class="inner-page"><span class="eyebrow">MEDIA</span><h1>Listen. Watch. Learn.</h1><p class="lead">Konten audio dan video singkat untuk menemani proses belajar tentang sustainability.</p><div id="mediaList" class="story-grid three media-cards"><article class="story-card"><div class="thumb art-green">🎧</div><h3>Memuat media...</h3></article></div></main>
+<footer><div class="footer-bottom"><span>© 2026 EcoTrack</span><a class="brand" href="index.html">ECOTRACK</a></div></footer><script>
+fetch("content/media.json").then(r=>r.json()).then(data=>{
+ const list=document.getElementById("mediaList"); if(!list)return; list.innerHTML="";
+ data.forEach((item,i)=>{
+  const c=document.createElement("article"); c.className="story-card";
+  const t=document.createElement("div"); t.className="thumb "+(["art-green","art-blue","art-sand"][i%3]); t.textContent=item.type.toLowerCase().includes("video")?"🎥":"🎧";
+  const sm=document.createElement("small"); sm.textContent=item.type;
+  const h=document.createElement("h3"); h.textContent=item.title;
+  const p=document.createElement("p"); p.textContent=item.description;
+  c.append(t,sm,h,p);
+  if(item.url){const a=document.createElement("a");a.className="btn outline";a.href=item.url;a.target="_blank";a.rel="noopener";a.textContent="Open";c.appendChild(a)}
+  list.appendChild(c);
+ });
+}).catch(()=>{});
+</script>
+</body></html>

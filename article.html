@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Articles — Srikandi UGM</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
+<body>
+<header class="topbar"><a class="brand" href="index.html">Srikandi UGM</a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="article.html">Article</a><a href="media.html">Media</a><a href="dashboard.html">Dashboard</a></nav><div class="top-actions"><button class="icon-btn" id="themeToggle">☾</button></div></header>
+<main class="inner-page"><span class="eyebrow">ARTICLE / SUSTAINABILITY</span><h1>Small habits, meaningful impact.</h1><p class="lead">Sustainability tidak harus dimulai dari perubahan besar. Kebiasaan sederhana yang dilakukan secara konsisten dapat membantu mengurangi penggunaan sumber daya dan membentuk pola hidup yang lebih sadar lingkungan.</p>
+<div class="article-cover art-green">🌍</div>
+<div id="articleContent" class="article-body"><p>Memuat artikel...</p></div>
+<a class="btn dark" href="dashboard.html">Calculate My Impact →</a></main>
+<footer><div class="footer-bottom"><span>© 2026 Srikandi UGM</span><a class="brand" href="index.html">Srikandi UGM</a></div></footer><script>
+fetch("content/articles.json").then(r=>r.json()).then(data=>{
+ const a=data[0]; if(!a)return;
+ document.title=a.title+" —  Srikandi UGM";
+ document.querySelector(".inner-page > h1").textContent=a.title;
+ document.querySelector(".inner-page > .eyebrow").textContent="ARTICLE / "+a.category;
+ const box=document.getElementById("articleContent"); box.innerHTML="";
+ a.body.split(/\n+/).forEach(t=>{if(t.trim()){const p=document.createElement("p");p.textContent=t.trim();box.appendChild(p)}});
+}).catch(()=>{});
+</script>
+</body></html
