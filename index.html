@@ -1,139 +1,293 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Srikandi UGM</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Srikandi UGM</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
-<header class="topbar">
-  <a class="brand" href="index.html">SRIKANDI UGM</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="article.html">Article</a>
-    <a href="media.html">Media</a>
-    <a href="dashboard.html">Dashboard</a>
-  </nav>
-  <div class="top-actions">
-    <button class="login-btn" onclick="showMessage('Fitur login dapat dikembangkan pada tahap berikutnya.')">Login</button>
-    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">☾</button>
-    <button class="menu-btn" onclick="toggleMenu()">☰</button>
-  </div>
-</header>
 
-<main>
-  <section class="hero">
-    <div class="hero-copy">
-      <div class="logo-box">Srikandi UGM</div>
-      <h1>Live greener.<br>Think smarter.</h1>
-      <p>Platform digital untuk mengenal gaya hidup berkelanjutan, menghitung jejak karbon, dan menemukan langkah kecil yang berdampak besar.</p>
-      <div class="hero-actions">
-        <a class="btn dark" href="dashboard.html">Explore Dashboard</a>
-        <a class="text-link" href="about.html">Learn more →</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="visual-circle">🌎</div>
-      <span class="floating-tag tag-one">LOW WASTE</span>
-      <span class="floating-tag tag-two">SMART LIVING</span>
-    </div>
-  </section>
+    <!-- ================= NAVBAR ================= -->
+    <header class="topbar">
 
-  <section class="latest section">
-    <div class="section-head">
-      <h2>Latest Stories</h2>
-      <a href="article.html">View All →</a>
-    </div>
-    <div class="featured-grid">
-      <article class="featured-image art-green">♻️</article>
-      <article class="featured-copy">
-        <span class="eyebrow">SUSTAINABLE LIVING</span>
-        <h3>Small habits, meaningful impact.</h3>
-        <p>Mulai dari transportasi, konsumsi listrik, sampai penggunaan plastik. Kenali kebiasaan harianmu dan ubah sedikit demi sedikit.</p>
-        <a class="btn outline" href="article.html">Read Article</a>
-      </article>
-      <article class="small-feature">
-        <div class="thumb art-blue">🚲</div>
-        <h3>Mobilitas hijau untuk sehari-hari</h3>
-        <small>Category / Tips</small>
-      </article>
-    </div>
+        <a href="index.html" class="brand">
+            Srikandi UGM
+        </a>
 
-    <div class="story-grid three">
-      <article class="story-card"><div class="thumb art-sand">💡</div><h3>Hemat energi tanpa ribet</h3><small>Category / Energy</small></article>
-      <article class="story-card"><div class="thumb art-green">🥬</div><h3>Belanja lebih sadar lingkungan</h3><small>Category / Lifestyle</small></article>
-      <article class="story-card"><div class="thumb art-blue">💧</div><h3>Kurangi penggunaan air</h3><small>Category / Water</small></article>
-    </div>
-  </section>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="article.html">Article</a>
+            <a href="media.html">Media</a>
+        </nav>
 
-  <section class="digital section">
-    <div class="issue-number"><span>01</span><b>02</b><span>03</span><span>04</span><span>→</span></div>
-    <div class="cover art-dark">🌿</div>
-    <div class="issue-copy">
-      <span class="eyebrow">DIGITAL ZINE SERIES</span>
-      <h2>Issue 01: Green Starts Here</h2>
-      <p>Kumpulan cerita, tips, dan insight tentang sustainability untuk generasi digital.</p>
-      <a class="btn outline" href="article.html">View More</a>
-    </div>
-  </section>
+        <div class="top-actions">
 
-  <section class="editors section">
-    <div class="section-title">EDITOR'S PICK</div>
-    <div class="editors-grid">
-      <article class="editor-card"><div class="thumb art-green">🌱</div><small>Category / Tips</small><h3>Mulai dari satu kebiasaan</h3><p>Langkah kecil yang bisa dilakukan hari ini.</p></article>
-      <article class="editor-card"><div class="thumb art-blue">🌊</div><small>Category / Water</small><h3>Air adalah sumber daya</h3><p>Kenapa kita perlu menggunakannya dengan bijak.</p></article>
-      <article class="editor-card"><div class="thumb art-sand">☀️</div><small>Category / Energy</small><h3>Energi lebih cerdas</h3><p>Kenali penggunaan energi di rumah.</p></article>
-      <article class="editor-card"><div class="thumb art-dark">🌍</div><small>Category / Climate</small><h3>Kenali jejak karbonmu</h3><p>Gunakan dashboard EcoTrack untuk menghitungnya.</p></article>
-    </div>
-  </section>
+            <!-- Tombol dark mode -->
+            <button class="icon-btn" id="themeToggle">
+                ☾
+            </button>
 
-  <section class="archive section">
-    <div class="section-head"><h2>ARCHIVE</h2><a href="article.html">Browse all →</a></div>
-    <div class="archive-grid">
-      <div class="archive-main"><div class="thumb tall art-green">🌳</div><h3>Kenapa sustainability penting?</h3><p>Memahami hubungan antara kebiasaan manusia dan lingkungan.</p><small>Category / Climate</small></div>
-      <div class="archive-main"><div class="thumb tall art-blue">🚆</div><h3>Transportasi rendah emisi</h3><p>Pilihan mobilitas yang lebih ramah lingkungan.</p><small>Category / Mobility</small></div>
-      <div class="archive-list">
-        <div><span class="mini art-sand">♻</span><p>Zero waste untuk pemula</p></div>
-        <div><span class="mini art-green">🌱</span><p>Menanam di ruang kecil</p></div>
-        <div><span class="mini art-blue">💧</span><p>Bijak menggunakan air</p></div>
-        <div><span class="mini art-dark">☀</span><p>Energi bersih masa depan</p></div>
-        <a class="btn outline" href="article.html">View More</a>
-      </div>
-    </div>
-  </section>
+            <!-- Tombol menu -->
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
 
-  <section class="media-section section">
-    <div class="section-head"><h2>MEDIA</h2><a href="media.html">View all →</a></div>
-    <div class="media-feature">
-      <div class="vinyl">◉</div>
-      <div class="media-cover art-green">🎧</div>
-      <div>
-        <span class="eyebrow">PODCAST / TOPIC</span>
-        <h2>Episode 01: Green Mindset</h2>
-        <p>Obrolan singkat tentang bagaimana teknologi membantu kita hidup lebih berkelanjutan.</p>
-        <button class="btn outline" onclick="showMessage('Pemutar audio dapat ditambahkan pada tahap berikutnya.')">Listen Now</button>
-      </div>
-    </div>
-    <div class="story-grid three">
-      <article class="story-card"><div class="thumb art-blue">🎙️</div><small>Podcast / Episode 02</small><h3>Digital for Earth</h3></article>
-      <article class="story-card"><div class="thumb art-sand">🎥</div><small>Video / Episode 03</small><h3>Green Campus</h3></article>
-      <article class="story-card"><div class="thumb art-green">🎧</div><small>Podcast / Episode 04</small><h3>Better Daily Habits</h3></article>
-    </div>
-  </section>
-</main>
+        </div>
 
-<footer>
-  <div class="footer-grid">
-    <div><b>Explore</b><a href="article.html">Articles</a><a href="dashboard.html">Dashboard</a><a href="media.html">Podcast</a></div>
-    <div><b>About Us</b><a href="about.html">Our Story</a><a href="about.html">Technology</a><a href="about.html">Contact</a></div>
-    <div><b>Collaboration</b><a href="about.html">Partner</a><a href="about.html">Subscribe</a></div>
-    <div class="follow"><b>Follow Us</b><div><button onclick="showMessage('Instagram')">◎</button><button onclick="showMessage('LinkedIn')">in</button><button onclick="showMessage('YouTube')">▶</button></div></div>
-  </div>
-  <div class="footer-bottom"><span>© 2026 EcoTrack. Privacy Policy · Terms of Use</span><a class="brand" href="index.html">ECOTRACK</a></div>
-</footer>
-<div id="toast" class="toast"></div>
+    </header>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside id="sideMenu" class="side-menu">
+
+        <button class="close-btn" onclick="toggleMenu()">
+            ×
+        </button>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <h2>Topics</h2>
+
+        <div class="topic-group">
+
+            <h3>A</h3>
+
+            <div class="topic-list">
+                <a href="article.html">Topic 1</a>
+                <a href="article.html">Topic 3</a>
+                <a href="article.html">Topic 2</a>
+                <a href="article.html">Topic 4</a>
+            </div>
+
+        </div>
+
+
+        <div class="topic-group">
+
+            <h3>B</h3>
+
+            <div class="topic-list">
+                <a href="article.html">Topic 1</a>
+                <a href="article.html">Topic 3</a>
+                <a href="article.html">Topic 2</a>
+                <a href="article.html">Topic 4</a>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="home-hero">
+
+            <div class="hero-logo">
+                <img
+                    src="assets/uploads/LOGO SRIKANDI UGM.png" style="max-width: 25%;"
+                >
+            </div>
+
+            <h1>
+                Serikat Mahasiswa Untuk Indonesia,
+                Universitas Gadjah Mada
+            </h1>
+
+            <p class="hero-description">
+                Ruang informasi, cerita, dan gagasan Srikandi UGM
+                mengenai kesetaraan, keberagaman, keberlanjutan,
+                serta berbagai isu sosial di lingkungan mahasiswa
+                dan masyarakat.
+            </p>
+
+        </section>
+
+
+        <!-- ================= FEATURE ================= -->
+
+        <section class="featured-section">
+
+            <div class="featured-image">
+                <img
+                    src="assets/images/featured.jpg"
+                    alt="Featured Article"
+                >
+            </div>
+
+            <div class="featured-content">
+
+                <span class="eyebrow">
+                    FEATURED ARTICLE
+                </span>
+
+                <h2>
+                    Membuka Ruang untuk
+                    Kesetaraan dan Perubahan
+                </h2>
+
+                <p>
+                    Temukan berbagai artikel dan informasi mengenai
+                    kegiatan, isu sosial, kesetaraan gender, serta
+                    cerita dari Srikandi UGM.
+                </p>
+
+                <a href="article.html" class="btn">
+                    View Article
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ARTICLE PREVIEW ================= -->
+
+        <section class="article-section">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    LATEST ARTICLES
+                </span>
+
+                <h2>
+                    Latest Stories
+                </h2>
+
+            </div>
+
+
+            <div class="article-grid">
+
+                <article class="article-card">
+
+                    <img
+                        src="assets/images/article1.jpg"
+                        alt="Article 1"
+                    >
+
+                    <span>
+                        ARTICLE / TOPIC
+                    </span>
+
+                    <h3>
+                        Ruang Aman dan Kesetaraan
+                    </h3>
+
+                    <p>
+                        Membahas pentingnya menciptakan
+                        lingkungan yang aman dan inklusif.
+                    </p>
+
+                    <a href="article.html">
+                        Read More →
+                    </a>
+
+                </article>
+
+
+                <article class="article-card">
+
+                    <img
+                        src="assets/images/article2.jpg"
+                        alt="Article 2"
+                    >
+
+                    <span>
+                        ARTICLE / SOCIAL
+                    </span>
+
+                    <h3>
+                        Suara Mahasiswa untuk Perubahan
+                    </h3>
+
+                    <p>
+                        Gagasan dan kontribusi mahasiswa
+                        dalam menciptakan perubahan sosial.
+                    </p>
+
+                    <a href="article.html">
+                        Read More →
+                    </a>
+
+                </article>
+
+
+                <article class="article-card">
+
+                    <img
+                        src="assets/images/article3.jpg"
+                        alt="Article 3"
+                    >
+
+                    <span>
+                        ARTICLE / COMMUNITY
+                    </span>
+
+                    <h3>
+                        Bergerak Bersama
+                    </h3>
+
+                    <p>
+                        Cerita mengenai kegiatan dan kolaborasi
+                        komunitas Srikandi UGM.
+                    </p>
+
+                    <a href="article.html">
+                        Read More →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Srikandi UGM</h3>
+                <p>
+                    Ruang informasi dan gagasan
+                    untuk mahasiswa dan masyarakat.
+                </p>
+            </div>
+
+                    </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Srikandi UGM
+            </span>
+
+            <span>
+                SRIKANDI UGM
+            </span>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>
