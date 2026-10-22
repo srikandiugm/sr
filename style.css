@@ -405,3 +405,32 @@ footer {
     }
 
 }
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark footer {
+    background: #2b2b2b;
+    color: #eee;
+}
+
+body.dark .hero-description,
+body.dark .featured-content p,
+body.dark .article-card p {
+    color: #bbb;
+}
+
+body.dark .btn,
+body.dark .article-card a {
+    color: #eee;
+}
+
+body.dark .btn {
+    border-color: #eee;
+}
+
+body.dark .article-card {
+    border-color: #444;
+}
