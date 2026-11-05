@@ -454,53 +454,61 @@ html {
     scroll-padding-top: 90px; /* Prevents sticky navbar from covering section titles when jumping */
 }
 
-/* ABOUT PAGE SPECIFIC STYLES */
-.text-center {
-    text-align: center;
-}
-
-.about-hero {
+/* ABOUT PAGE STYLES */
+.page-header {
     background-color: var(--bg-light-pink);
     padding: 70px 24px;
+    text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
 
-.about-hero h1 {
+.page-header h1 {
     font-size: 2.5rem;
-    margin: 16px 0;
-    color: var(--text-navy);
+    margin: 16px 0 12px 0;
 }
 
-.about-hero p {
-    max-width: 700px;
-    margin: 0 auto;
+.page-header p {
     color: var(--text-muted);
-    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.05rem;
 }
 
 .about-section {
     padding: 70px 0;
 }
 
-.about-section.alt-bg {
+.bg-alt {
     background-color: var(--bg-light-pink);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.about-section-header {
+.section-title {
     margin-bottom: 24px;
 }
 
-.about-section-header h2 {
+.sub-badge {
+    color: var(--primary-pink-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.section-title h2 {
     font-size: 2rem;
     color: var(--text-navy);
 }
 
-.divider {
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary-pink);
-    border-radius: 2px;
-    margin-top: 8px;
+.section-intro {
+    color: var(--text-muted);
+    margin-bottom: 36px;
+    max-width: 700px;
 }
 
 .about-card {
@@ -509,42 +517,89 @@ html {
     border-radius: 12px;
     padding: 36px;
     box-shadow: var(--shadow);
+    line-height: 1.8;
+    color: var(--text-muted);
 }
 
-.mascot-container {
+.team-grid {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.team-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+}
+
+.team-icon {
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-soft-pink);
+    color: var(--primary-pink-dark);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+}
+
+.team-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.team-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.mascot-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
     align-items: center;
 }
 
 .mascot-placeholder {
-    height: 200px;
-    background-color: var(--bg-soft-pink);
-    border: 2px dashed var(--primary-pink);
-    border-radius: 10px;
+    background-color: var(--bg-light-pink);
+    border: 2px dashed var(--border-color);
+    border-radius: 16px;
+    height: 320px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
     color: var(--primary-pink-dark);
     font-weight: 600;
-    text-align: center;
-    padding: 16px;
 }
 
-.mascot-text h3 {
-    font-size: 1.5rem;
-    color: var(--text-navy);
-    margin-bottom: 12px;
+.mascot-placeholder i {
+    font-size: 3rem;
 }
 
-.mascot-text p {
+.mascot-content h2 {
+    font-size: 2rem;
+    margin: 8px 0 16px 0;
+}
+
+.mascot-content p {
     color: var(--text-muted);
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 @media (max-width: 768px) {
-    .mascot-container {
+    .mascot-layout {
         grid-template-columns: 1fr;
     }
 }
