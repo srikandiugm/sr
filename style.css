@@ -126,27 +126,14 @@ body {
 }
 
 /* --- 3. HERO & PAGE HEADERS --- */
-.hero {
+.hero, .about-hero {
     background-color: var(--bg-light-pink);
     padding: 80px 24px;
     text-align: center;
     border-bottom: 1px solid var(--border-color);
 }
 
-.hero-content { max-width: 760px; margin: 0 auto; }
-
-.about-hero {
-    background-color: var(--bg-light-pink);
-    padding: 80px 24px;
-    text-align: center;
-    border-bottom: 1px solid var(--border-color);
-    width: 100%;
-}
-
-.about-hero-content {
-    max-width: 760px;
-    margin: 0 auto;
-}
+.hero-content, .about-hero { max-width: 760px; margin: 0 auto; }
 
 .badge {
     background-color: var(--bg-soft-pink);
