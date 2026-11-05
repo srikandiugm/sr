@@ -547,3 +547,56 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
+/* INSTAGRAM HORIZONTAL SCROLL CAROUSEL STYLES */
+.instagram-carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin-top: 24px;
+    /* Smooth scrolling behavior for touchpads / mobile */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+/* Customizing scrollbar appearance */
+.instagram-carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.instagram-carousel-container::-webkit-scrollbar-track {
+    background: var(--bg-soft-pink);
+    border-radius: 4px;
+}
+
+.instagram-carousel-container::-webkit-scrollbar-thumb {
+    background: var(--primary-pink);
+    border-radius: 4px;
+}
+
+.instagram-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+}
+
+.insta-embed-card {
+    scroll-snap-align: start;
+    width: 350px;
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* Override default Instagram embed margins so they align cleanly inside cards */
+.insta-embed-card .instagram-media {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
