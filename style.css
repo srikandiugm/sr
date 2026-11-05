@@ -4,7 +4,7 @@
     --bg-soft-pink: #FCE7F0;
     --primary-pink: #E87A90;
     --primary-pink-dark: #D65A74;
-    --text-navy: ##1E3059;
+    --text-navy: #1E3059; 
     --text-muted: #475569;
     --white: #FFFFFF;
     --border-color: #F3D5E0;
@@ -12,7 +12,7 @@
 }
 
 /* BASE STYLES */
-* {
+* { /* Fixed missing asterisk */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -599,4 +599,56 @@ html {
     max-width: 100% !important;
     border-radius: 0 !important;
     box-shadow: none !important;
+}
+
+/* CLEAN INSTAGRAM PREVIEW CARDS */
+.instagram-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.insta-preview-card {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 32px 24px;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.insta-preview-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-pink);
+}
+
+.insta-icon-overlay {
+    width: 50px;
+    height: 50px;
+    background-color: var(--bg-soft-pink);
+    color: var(--primary-pink-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.insta-placeholder-text h4 {
+    color: var(--text-navy);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.insta-placeholder-text p {
+    color: var(--primary-pink-dark);
+    font-size: 0.9rem;
+    font-weight: 600;
 }
