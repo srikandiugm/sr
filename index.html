@@ -1,293 +1,133 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Srikandi UGM</title>
-
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="topbar">
+    <!-- TOP NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="Srikandi-Logo.png" alt="Srikandi UGM Logo">
+                <span>Srikandi UGM</span>
+            </a>
 
-        <a href="index.html" class="brand">
-            Srikandi UGM
-        </a>
+            <nav>
+                <ul class="nav-links">
+                    <!-- About Page -->
+                    <li class="dropdown">
+                        <a href="about.html">About <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#journey">Our Journey</a></li>
+                            <li><a href="about.html#team">Team Structure</a></li>
+                            <li><a href="about.html#mascot">Mascot</a></li>
+                        </ul>
+                    </li>
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="article.html">Article</a>
-            <a href="media.html">Media</a>
-        </nav>
+                    <!-- Article Page -->
+                    <li class="dropdown">
+                        <a href="article.html">Articles<i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="article.html#news">Latest News</a></li>
+                            <li><a href="article.html#advocacy">Advocacy Papers</a></li>
+                            <li><a href="article.html#stories">Impact</a></li>
+                        </ul>
+                    </li>
 
-        <div class="top-actions">
-
-            <!-- Tombol dark mode -->
-            <button class="icon-btn" id="themeToggle">
-                ☾
-            </button>
-
-            <!-- Tombol menu -->
-            <button class="menu-btn" onclick="toggleMenu()">
-                ☰
-            </button>
-
+                    <!-- Media Page -->
+                    <li class="dropdown">
+                        <a href="media.html">Media <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="media.html#gallery">Photo Gallery</a></li>
+                            <li><a href="media.html#videos">Video Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
     </header>
 
-
-    <!-- ================= SIDEBAR ================= -->
-
-    <aside id="sideMenu" class="side-menu">
-
-        <button class="close-btn" onclick="toggleMenu()">
-            ×
-        </button>
-
-        <div class="search-box">
-            <span>⌕</span>
-            <input type="text" placeholder="Search">
-        </div>
-
-        <h2>Topics</h2>
-
-        <div class="topic-group">
-
-            <h3>A</h3>
-
-            <div class="topic-list">
-                <a href="article.html">Topic 1</a>
-                <a href="article.html">Topic 3</a>
-                <a href="article.html">Topic 2</a>
-                <a href="article.html">Topic 4</a>
-            </div>
-
-        </div>
-
-
-        <div class="topic-group">
-
-            <h3>B</h3>
-
-            <div class="topic-list">
-                <a href="article.html">Topic 1</a>
-                <a href="article.html">Topic 3</a>
-                <a href="article.html">Topic 2</a>
-                <a href="article.html">Topic 4</a>
-            </div>
-
-        </div>
-
-    </aside>
-
-
-    <!-- ================= HERO ================= -->
-
     <main>
-
-        <section class="home-hero">
-
-            <div class="hero-logo">
-                <img
-                    src="assets/uploads/LOGO SRIKANDI UGM.png" style="max-width: 25%;"
-                >
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">Inklusif Bertumbuh, Kolektif Berdampak</span>
+                <h1>Srikandi UGM: sajdakfhadf</h1>
+                <p>Aksi, Diskusi, Visitasi, Representasi</p>
+                <div class="hero-actions">
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
+                    <a href="article.html" class="btn btn-secondary">Read Articles</a>
+                </div>
             </div>
-
-            <h1>
-                Serikat Mahasiswa Untuk Indonesia,
-                Universitas Gadjah Mada
-            </h1>
-
-            <p class="hero-description">
-                Ruang informasi, cerita, dan gagasan Srikandi UGM
-                mengenai kesetaraan, keberagaman, keberlanjutan,
-                serta berbagai isu sosial di lingkungan mahasiswa
-                dan masyarakat.
-            </p>
-
         </section>
-
-
-        <!-- ================= FEATURE ================= -->
-
-        <section class="featured-section">
-
-            <div class="featured-image">
-                <img
-                    src="assets/images/featured.jpg"
-                    alt="Featured Article"
-                >
-            </div>
-
-            <div class="featured-content">
-
-                <span class="eyebrow">
-                    FEATURED ARTICLE
-                </span>
-
-                <h2>
-                    Membuka Ruang untuk
-                    Kesetaraan dan Perubahan
-                </h2>
-
-                <p>
-                    Temukan berbagai artikel dan informasi mengenai
-                    kegiatan, isu sosial, kesetaraan gender, serta
-                    cerita dari Srikandi UGM.
-                </p>
-
-                <a href="article.html" class="btn">
-                    View Article
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ARTICLE PREVIEW ================= -->
-
-        <section class="article-section">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    LATEST ARTICLES
-                </span>
-
-                <h2>
-                    Latest Stories
-                </h2>
-
-            </div>
-
-
-            <div class="article-grid">
-
-                <article class="article-card">
-
-                    <img
-                        src="assets/images/article1.jpg"
-                        alt="Article 1"
-                    >
-
-                    <span>
-                        ARTICLE / TOPIC
-                    </span>
-
-                    <h3>
-                        Ruang Aman dan Kesetaraan
-                    </h3>
-
-                    <p>
-                        Membahas pentingnya menciptakan
-                        lingkungan yang aman dan inklusif.
-                    </p>
-
-                    <a href="article.html">
-                        Read More →
-                    </a>
-
-                </article>
-
-
-                <article class="article-card">
-
-                    <img
-                        src="assets/images/article2.jpg"
-                        alt="Article 2"
-                    >
-
-                    <span>
-                        ARTICLE / SOCIAL
-                    </span>
-
-                    <h3>
-                        Suara Mahasiswa untuk Perubahan
-                    </h3>
-
-                    <p>
-                        Gagasan dan kontribusi mahasiswa
-                        dalam menciptakan perubahan sosial.
-                    </p>
-
-                    <a href="article.html">
-                        Read More →
-                    </a>
-
-                </article>
-
-
-                <article class="article-card">
-
-                    <img
-                        src="assets/images/article3.jpg"
-                        alt="Article 3"
-                    >
-
-                    <span>
-                        ARTICLE / COMMUNITY
-                    </span>
-
-                    <h3>
-                        Bergerak Bersama
-                    </h3>
-
-                    <p>
-                        Cerita mengenai kegiatan dan kolaborasi
-                        komunitas Srikandi UGM.
-                    </p>
-
-                    <a href="article.html">
-                        Read More →
-                    </a>
-
-                </article>
-
-            </div>
-
-        </section>
-
     </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-content">
-
-            <div>
-                <h3>Srikandi UGM</h3>
-                <p>
-                    Ruang informasi dan gagasan
-                    untuk mahasiswa dan masyarakat.
-                </p>
-            </div>
-
+    
+<!-- VISION & MISSION SECTION -->
+        <section id="vision-mission" class="section vision-mission-section">
+            <div class="container">
+                <div class="vision-mission-grid">
+                    <!-- Vision Box (Left) -->
+                    <div class="vm-card vision-card">
+                        <div class="vm-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h2>Our Vision</h2>
+                        <p>We,,,,</p>
                     </div>
 
-        <div class="footer-bottom">
+                    <!-- Mission Box (Right) -->
+                    <div class="vm-card mission-card">
+                        <div class="vm-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h2>Our Mission</h2>
+                        <p>We aim to....</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- FOOTER WITH CONTACTS & SOCIALS -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>Srikandi UGM</h3>
+                <p>[ Short closing statement or vision statement placeholder. ]</p>
+            </div>
 
-            <span>
-                © 2026 Srikandi UGM
-            </span>
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="media.html">Media</a></li>
+                </ul>
+            </div>
 
-            <span>
-                SRIKANDI UGM
-            </span>
-
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:srikandiugm1@gmail.com">srikandiugm1@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/srikandi_ugm" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@SrikandiUGM" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="mailto:srikandiugm1@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/+6285600657251" target="_blank" ><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
         </div>
 
+        <div class="footer-bottom">
+            <p>&copy; 2026 Srikandi UGM. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
