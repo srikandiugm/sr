@@ -1,67 +1,157 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Srikandi UGM</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - something</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
-  <header class="topbar">
-    <a class="brand" href="index.html">Srikandi UGM</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="article.html">Article</a>
-      <a href="media.html">Media</a>
-      <a href="dashboard.html">Dashboard</a>
-    </nav>
-    <div class="top-actions">
-      <button class="icon-btn" id="themeToggle">☾</button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
-    </div>
-  </header>
+    <!-- TOP NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="placeholder-logo.png" alt="somethingLogo">
+                <span>something</span>
+            </a>
 
-  <!-- Main Content -->
-  <main class="inner-page">
-    <div class="logo-container">
-      <img src="assets/uploads/LOGO SRIKANDI UGM.png" style="max-width: 180px;" alt="Srikandi UGM Logo">
-    </div>
+            <nav>
+                <ul class="nav-links">
+                    <!-- Home Page -->
+                    <li class="dropdown">
+                        <a href="index.html">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#vision-mission">Vision & Mission</a></li>
+                        </ul>
+                    </li>
 
-    <h1>About Srikandi UGM</h1>
-    
-    <p class="lead">
-      Serikat Mahasiswa Untuk Indonesia Universitas Gadjah Mada, yang disingkat menjadi Srikandi UGM, adalah sebuah komunitas yang memperjuangkan hak asasi manusia dan kesetaraan gender. Berdiri pada tanggal 8 April 2008, Srikandi UGM hingga saat ini tetap berkomitmen untuk memberikan dampak yang nyata secara menyeluruh kepada civitas academica Universitas Gadjah Mada, komunitas, dan masyarakat luas di Daerah Istimewa Yogyakarta, Republik Indonesia, serta kancah internasional.
-    </p>
+                    <!-- About Page -->
+                    <li class="dropdown">
+                        <a href="about.html" class="active">About <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#story">Our Journey</a></li>
+                            <li><a href="about.html#team">Team Structure</a></li>
+                            <li><a href="about.html#mascot">Mascot</a></li>
+                        </ul>
+                    </li>
 
-    <!-- Mission & Visi Grid -->
-    <div class="about-grid">
-      <div class="about-box art-green">
-        <h2>Visi & Misi Kami</h2>
-        <p>
-          Mewujudkan ruang aman, inklusif, dan adil gender di lingkungan kampus maupun masyarakat luas melalui edukasi, advokasi hak asasi manusia, serta pemberdayaan perempuan secara berkelanjutan.
-        </p>
-      </div>
+                    <!-- Article Page -->
+                    <li class="dropdown">
+                        <a href="article.html">Articles <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="article.html#news">Latest News</a></li>
+                            <li><a href="article.html#advocacy">Advocacy Papers</a></li>
+                            <li><a href="article.html#stories">Impact</a></li>
+                        </ul>
+                    </li>
 
-      <div class="about-box art-blue">
-        <h2>Fokus Gerakan</h2>
-        <p>
-          Melalui kampanye edukatif, diskusi publik, advokasi isu kesetaraan gender, dan aksi komunitas, Srikandi UGM hadir sebagai wadah perjuangan dan edukasi bagi seluruh civitas akademika dan masyarakat.
-        </p>
-      </div>
-    </div>
-  </main>
+                    <!-- Media Page -->
+                    <li class="dropdown">
+                        <a href="media.html">Media <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="media.html#gallery">Photo Gallery</a></li>
+                            <li><a href="media.html#videos">Video Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-bottom">
-      <span>© 2026 Srikandi UGM</span>
-      <a class="brand" href="index.html">SRIKANDI UGM</a>
-    </div>
-  </footer>
+    <main>
+        <!-- PAGE HERO HEADER -->
+        <section class="about-hero">
+            <div class="container text-center">
+                <span class="badge">Tentang Kami</span>
+                <h1>Mengenal Lebih Dekat Organisasi Kami</h1>
+                <p>[ Placeholder short introductory overview about the organization's history, scope, and community role. ]</p>
+            </div>
+        </section>
 
+        <!-- SECTION 1: OUR JOURNEY -->
+        <section id="story" class="about-section">
+            <div class="container">
+                <div class="about-section-header">
+                    <h2>Our Journey</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-card">
+                    <p>[ Insert placeholder text describing the history, key milestones, foundational background, and progression of the organization over time. ]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TEAM STRUCTURE -->
+        <section id="team" class="about-section alt-bg">
+            <div class="container">
+                <div class="about-section-header">
+                    <h2>Team Structure</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-card">
+                    <p>[ Insert placeholder text or structural diagram detailing the organization's divisions, leadership, core committees, and operational framework. ]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: MASCOT -->
+        <section id="mascot" class="about-section">
+            <div class="container">
+                <div class="about-section-header">
+                    <h2>Mascot</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="about-card mascot-container">
+                    <div class="mascot-placeholder">
+                        [ Mascot Image / Illustration Placeholder ]
+                    </div>
+                    <div class="mascot-text">
+                        <h3>[ Mascot Name Placeholder ]</h3>
+                        <p>[ Insert placeholder description explaining the mascot's design, underlying symbolism, and official role within the organization. ]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER WITH CONTACTS & SOCIALS -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>something</h3>
+                <p>[ Short closing statement or vision statement placeholder. ]</p>
+            </div>
+
+            <div class="footer-nav">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="article.html">Articles</a></li>
+                    <li><a href="media.html">Media</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:something@gmail.com">something@gmail.com</a></p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/something" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@soemthing" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="mailto:something@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://wa.me/+placeholder" target="_blank"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 something. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
