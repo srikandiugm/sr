@@ -1,19 +1,72 @@
 <!DOCTYPE html>
-<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Articles — Srikandi UGM</title><link rel="stylesheet" href="style.css"><script defer src="script.js"></script></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Srikandi UGM</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-<header class="topbar"><a class="brand" href="index.html">Srikandi UGM</a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="article.html">Article</a><a href="media.html">Media</a><a href="dashboard.html">Dashboard</a></nav><div class="top-actions"><button class="icon-btn" id="themeToggle">☾</button></div></header>
-<main class="inner-page"><span class="eyebrow">ARTICLE / SUSTAINABILITY</span><h1>Small habits, meaningful impact.</h1><p class="lead">Sustainability tidak harus dimulai dari perubahan besar. Kebiasaan sederhana yang dilakukan secara konsisten dapat membantu mengurangi penggunaan sumber daya dan membentuk pola hidup yang lebih sadar lingkungan.</p>
-<div class="article-cover art-green">🌍</div>
-<div id="articleContent" class="article-body"><p>Memuat artikel...</p></div>
 
-<footer><div class="footer-bottom"><span>© 2026 Srikandi UGM</span><a class="brand" href="index.html">Srikandi UGM</a></div></footer><script>
-fetch("content/articles.json").then(r=>r.json()).then(data=>{
- const a=data[0]; if(!a)return;
- document.title=a.title+" —  Srikandi UGM";
- document.querySelector(".inner-page > h1").textContent=a.title;
- document.querySelector(".inner-page > .eyebrow").textContent="ARTICLE / "+a.category;
- const box=document.getElementById("articleContent"); box.innerHTML="";
- a.body.split(/\n+/).forEach(t=>{if(t.trim()){const p=document.createElement("p");p.textContent=t.trim();box.appendChild(p)}});
-}).catch(()=>{});
-</script>
-</body></html
+    <!-- TOP NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="Srikandi-Logo.png" alt="Srikandi UGM Logo">
+                <span>Srikandi UGM</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <!-- Home Page -->
+                    <li class="dropdown">
+                        <a href="index.html">Home <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#vision-mission">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About Page -->
+                    <li class="dropdown">
+                        <a href="about.html" class="active">About <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html#story">Our Journey</a></li>
+                            <li><a href="about.html#team">Team Structure</a></li>
+                            <li><a href="about.html#mascot">Mascot</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Article Page -->
+                    <li class="dropdown">
+                        <a href="article.html">Articles <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="article.html#news">Latest News</a></li>
+                            <li><a href="article.html#advocacy">Advocacy Papers</a></li>
+                            <li><a href="article.html#stories">Impact</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Media Page -->
+                    <li class="dropdown">
+                        <a href="media.html">Media <i class="fa-solid fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="media.html#gallery">Photo Gallery</a></li>
+                            <li><a href="media.html#videos">Video Documentation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE HERO HEADER -->
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <span class="badge">Tentang Kami</span>
+                <h1>Mengenal Lebih Dekat Organisasi Kami</h1>
+                <p>[ Placeholder short introductory overview about the organization's history, scope, and community role. ]</p>
+            </div>
+        </section>
